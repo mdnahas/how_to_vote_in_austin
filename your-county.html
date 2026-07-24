@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Step 2: Which county do you live in? — How to Vote in Austin, Texas</title>
+<meta name="description" content="Step 2: find out which county you live in. The Austin area covers several counties, and your county runs your elections.">
+<link rel="canonical" href="https://howtovoteinaustin.org/your-county.html">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="bar">
+    <a class="brand" href="index.html">How to Vote in Austin, <span>Texas</span></a>
+    <nav class="lang" aria-label="Language">
+      <span class="current" aria-current="true">English</span>
+      <a lang="es" hreflang="es" href="es/index.html">Español</a>
+      <a lang="vi" hreflang="vi" href="vi/index.html">Tiếng Việt</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <p class="crumb">Step 2 of 8</p>
+  <h1>Which county do you live in?</h1>
+
+  <p>Texas is split into big areas called <strong>counties</strong>. Think of a county as the office that handles your voting paperwork — like the post office that serves your street. You do not choose it. Your home address decides it.</p>
+
+  <p>The Austin area covers <strong>more than one county</strong>. Central Austin is in <strong>Travis County</strong>. Some north parts are in <strong>Williamson County</strong>. Some southwest parts are in <strong>Hays County</strong>. Nearby areas can be in <strong>Bastrop</strong> or <strong>Caldwell County</strong>.</p>
+
+  <figure class="map">
+    <a href="https://en.wikipedia.org/wiki/Greater_Austin#/media/File:Greater_Austin.png" rel="noopener">
+      <img src="images/greater-austin-counties.png" width="900" height="1054" alt="Map of the Greater Austin area showing county lines: Travis, Williamson, Hays, Bastrop, and Caldwell.">
+    </a>
+    <figcaption>The Austin area and its counties. Tap the map for a larger version.</figcaption>
+  </figure>
+
+  <h2>Find your county</h2>
+  <p>Live within about 10 miles of downtown Austin? Then you are almost certainly in <strong>Travis County</strong>. Farther out, use the box below to be sure.</p>
+
+  <!-- Progressive enhancement: works as a plain form + official result page if JS is off. -->
+  <form class="lookup" id="county-form" action="https://geocoding.geo.census.gov/geocoder/geographies/address" method="get" target="_blank" rel="noopener">
+    <div class="row">
+      <span class="field">
+        <label for="county-street">Street address</label>
+        <input type="text" id="county-street" name="street" placeholder="123 Main St" autocomplete="address-line1">
+      </span>
+      <span class="field">
+        <label for="county-city">City</label>
+        <input type="text" id="county-city" name="city" value="Austin" autocomplete="address-level2">
+      </span>
+      <span class="field state">
+        <label for="county-state">State</label>
+        <input type="text" id="county-state" name="state" value="TX" size="3" autocomplete="address-level1">
+      </span>
+      <button class="btn" id="county-button" type="submit">Find my county</button>
+    </div>
+    <!-- Fixed values so the no-JavaScript submit still returns a result page. -->
+    <input type="hidden" name="benchmark" value="Public_AR_Current">
+    <input type="hidden" name="vintage" value="Current_Current">
+    <input type="hidden" name="format" value="html">
+    <p class="privacy-note">This website does not collect or keep your address. When you look up your county, your address is sent to the U.S. Census Bureau, which finds your county for us. Nothing is stored here.</p>
+  </form>
+  <div id="county-result" role="status" aria-live="polite"></div>
+
+  <p><strong>Remember it.</strong> Once you know your county, please write or memorize it. You will need it on the next pages. This website does not save it for you.</p>
+
+  <p>Why it matters: your county runs your elections. It is where you register, and it decides where you vote. So we need to know it first.</p>
+
+  <div class="watch">
+    <h2>⚠ Watch out — common mistakes</h2>
+    <ul>
+      <li><strong>Do not guess from your mail.</strong> An “Austin, TX” address can be outside the city, and even in another county. Use the box above.</li>
+      <li><strong>Use your home address</strong> — the place you actually live — not a post-office box, a mailbox store, or your work address.</li>
+      <li><strong>Near the edges, always check.</strong> More than 10 miles from downtown, do not assume Travis — look it up.</li>
+      <li><strong>Getting the county wrong breaks everything</strong> (registration, ballot, and polling place all depend on it). Get it right here.</li>
+      <li><strong>Write or memorize your county.</strong> This website will not remember it for you, and you will need it on the next pages.</li>
+    </ul>
+  </div>
+
+  <nav class="stepnav" aria-label="Steps">
+    <a class="prev" href="can-you-vote.html">Can you vote?</a>
+    <a class="next" href="register.html">Next: Register to vote</a>
+  </nav>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <p>This is not a government website. For official information, always check your county elections office or the <a href="https://www.votetexas.gov/" rel="noopener">Texas Secretary of State</a>.</p>
+    <nav aria-label="More pages">
+      <a href="questions.html">Questions &amp; Answers</a>
+      <a href="word-list.html">Word List</a>
+      <a href="get-help.html">Get More Help</a>
+      <a href="about.html">About This Site</a>
+    </nav>
+    <p class="legal">This campaign has not agreed to comply with the contribution and expenditure limits of the Austin Fair Campaign Chapter.</p>
+    <p class="legal">Paid for by Michael Nahas Campaign. Find out about Michael Nahas at <a href="https://mike4austin.org/" rel="noopener">mike4austin.org</a>.</p>
+    <p class="legal">&copy; 2026 Michael Nahas Campaign. Last updated July 2026. Rules and dates can change — please double-check the official links.</p>
+  </div>
+</footer>
+<script src="county-lookup.js"></script>
+</body>
+</html>
