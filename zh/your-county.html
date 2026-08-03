@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 2 步：您住在哪个县？— 如何在奥斯汀投票（德克萨斯州）</title>
+<meta name="description" content="第 2 步：查明您住在哪个县。奥斯汀地区横跨多个县，而您所在的县负责办理您的选举。">
+<link rel="canonical" href="https://howtovoteinaustin.org/zh/your-county.html">
+<link rel="alternate" hreflang="en" href="https://howtovoteinaustin.org/your-county.html">
+<link rel="alternate" hreflang="es" href="https://howtovoteinaustin.org/es/your-county.html">
+<link rel="alternate" hreflang="vi" href="https://howtovoteinaustin.org/vi/your-county.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://howtovoteinaustin.org/zh/your-county.html">
+<link rel="alternate" hreflang="x-default" href="https://howtovoteinaustin.org/your-county.html">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+<p class="mt-banner">机器翻译（由 Anthropic 的 Claude 于 2026 年 8 月 3 日翻译）。尚未经过人工审校。· Automatic translation, not yet reviewed by a person.</p>
+<header class="site-header">
+  <div class="bar">
+    <a class="brand" href="index.html">如何在奥斯汀投票，<span>Texas</span></a>
+    <nav class="lang" aria-label="语言">
+      <a lang="en" hreflang="en" href="../your-county.html">English</a>
+      <a lang="es" hreflang="es" href="../es/your-county.html">Español</a>
+      <a lang="vi" hreflang="vi" href="../vi/your-county.html">Tiếng Việt</a>
+      <span class="current" aria-current="true">简体中文</span>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <p class="crumb">第 2 步，共 8 步</p>
+  <h1>您住在哪个县？</h1>
+
+  <p>德州被划分为称为<strong>县</strong>的大片区域。可以把县想成处理您投票文书的办公室——就像为您那条街服务的邮局。您无法选择它，由您的住址决定。</p>
+
+  <p>奥斯汀地区<strong>横跨不止一个县</strong>。奥斯汀市中心在<strong>特拉维斯县（Travis County）</strong>。北部一些地方在<strong>威廉森县（Williamson County）</strong>。西南部一些地方在<strong>海斯县（Hays County）</strong>。附近地区可能在<strong>巴斯特罗普县（Bastrop）</strong>或<strong>考德威尔县（Caldwell County）</strong>。</p>
+
+  <figure class="map">
+    <a href="https://en.wikipedia.org/wiki/Greater_Austin#/media/File:Greater_Austin.png" rel="noopener">
+      <img src="../images/greater-austin-counties.png" width="900" height="1054" alt="大奥斯汀地区地图，显示各县边界：特拉维斯、威廉森、海斯、巴斯特罗普和考德威尔。">
+    </a>
+    <figcaption>奥斯汀地区及其各县。点按地图可查看放大版。</figcaption>
+  </figure>
+
+  <h2>查找您所在的县</h2>
+  <p>住在奥斯汀市中心约 10 英里（16 公里）以内？那您几乎可以肯定在<strong>特拉维斯县</strong>。更远的话，请用下面的方框来确认。</p>
+
+  <form class="lookup" id="county-form" action="https://geocoding.geo.census.gov/geocoder/geographies/address" method="get" target="_blank" rel="noopener">
+    <div class="row">
+      <span class="field">
+        <label for="county-street">街道地址</label>
+        <input type="text" id="county-street" name="street" placeholder="123 Main St" autocomplete="address-line1">
+      </span>
+      <span class="field">
+        <label for="county-city">城市</label>
+        <input type="text" id="county-city" name="city" value="Austin" autocomplete="address-level2">
+      </span>
+      <span class="field state">
+        <label for="county-state">州</label>
+        <input type="text" id="county-state" name="state" value="TX" size="3" autocomplete="address-level1">
+      </span>
+      <button class="btn" id="county-button" type="submit">查找我的县</button>
+    </div>
+    <input type="hidden" name="benchmark" value="Public_AR_Current">
+    <input type="hidden" name="vintage" value="Current_Current">
+    <input type="hidden" name="format" value="html">
+    <p class="privacy-note">本网站不会收集或保存您的地址。当您查找所在县时，您的地址会被发送到美国人口普查局（U.S. Census Bureau），由其为我们找出您的县。这里不会存储任何信息。</p>
+  </form>
+  <div id="county-result" role="status" aria-live="polite"></div>
+
+  <p><strong>记住它。</strong>知道您所在的县之后，请写下来或记住。接下来的页面会用到。本网站不会替您保存。</p>
+
+  <p>为什么重要：您所在的县负责办理您的选举。您在那里登记，它也决定您在哪里投票。所以我们要先知道它。</p>
+
+  <div class="watch">
+    <h2>⚠ 注意——常见错误</h2>
+    <ul>
+      <li><strong>不要根据邮件地址来猜。</strong>写着“Austin, TX”的地址可能在市界之外，甚至在另一个县。请使用上面的方框。</li>
+      <li><strong>使用您的住址</strong>——您实际居住的地方——不要用邮政信箱、代收邮件的店铺或您的工作地址。</li>
+      <li><strong>靠近边界时，一定要查。</strong>距市中心超过 10 英里，不要想当然认为是特拉维斯县——查一下。</li>
+      <li><strong>弄错县会毁掉一切</strong>（登记、选票和投票地点都取决于它）。在这一步一定要弄对。</li>
+      <li><strong>写下或记住您所在的县。</strong>本网站不会替您记住，而接下来的页面会用到。</li>
+    </ul>
+  </div>
+
+  <nav class="stepnav" aria-label="步骤">
+    <a class="prev" href="can-you-vote.html">您可以投票吗？</a>
+    <a class="next" href="register.html">下一步：登记投票</a>
+  </nav>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <p>这不是政府网站。如需官方信息，请务必查询您所在县的选举办公室或<a href="https://www.votetexas.gov/" rel="noopener">德克萨斯州州务卿（Texas Secretary of State）</a>。</p>
+    <nav aria-label="更多页面">
+      <a href="questions.html">问答</a>
+      <a href="word-list.html">词汇表</a>
+      <a href="get-help.html">获取更多帮助</a>
+      <a href="about.html">关于本网站</a>
+    </nav>
+    <p class="legal">本竞选活动未同意遵守《Austin Fair Campaign Chapter》规定的捐款和支出限额。</p>
+    <p class="legal">由 Michael Nahas 竞选团队出资。了解 Michael Nahas，请访问 <a href="https://mike4austin.org/" rel="noopener">mike4austin.org</a>。</p>
+    <p class="legal">&copy; 2026 Michael Nahas 竞选团队。最后更新于 2026 年 7 月。规则和日期可能会变化——请务必核对官方链接。</p>
+  </div>
+</footer>
+<script src="county-lookup.js"></script>
+</body>
+</html>

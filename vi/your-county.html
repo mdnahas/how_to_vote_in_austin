@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bước 2: Bạn sống ở quận nào? — Cách bỏ phiếu ở Austin, Texas</title>
+<meta name="description" content="Bước 2: tìm ra bạn sống ở quận nào. Khu vực Austin trải rộng trên nhiều quận, và quận của bạn điều hành các cuộc bầu cử của bạn.">
+<link rel="canonical" href="https://howtovoteinaustin.org/vi/your-county.html">
+<link rel="alternate" hreflang="en" href="https://howtovoteinaustin.org/your-county.html">
+<link rel="alternate" hreflang="es" href="https://howtovoteinaustin.org/es/your-county.html">
+<link rel="alternate" hreflang="vi" href="https://howtovoteinaustin.org/vi/your-county.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://howtovoteinaustin.org/zh/your-county.html">
+<link rel="alternate" hreflang="x-default" href="https://howtovoteinaustin.org/your-county.html">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Chuyển đến nội dung</a>
+<p class="mt-banner">Bản dịch tự động (do Claude của Anthropic thực hiện, ngày 3 tháng 8 năm 2026). Chưa có người kiểm tra lại. · Automatic translation, not yet reviewed by a person.</p>
+<header class="site-header">
+  <div class="bar">
+    <a class="brand" href="index.html">Cách bỏ phiếu ở Austin, <span>Texas</span></a>
+    <nav class="lang" aria-label="Ngôn ngữ">
+      <a lang="en" hreflang="en" href="../your-county.html">English</a>
+      <a lang="es" hreflang="es" href="../es/your-county.html">Español</a>
+      <span class="current" aria-current="true">Tiếng Việt</span>
+      <a lang="zh-Hans" hreflang="zh-Hans" href="../zh/your-county.html">简体中文</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <p class="crumb">Bước 2 trên 8</p>
+  <h1>Bạn sống ở quận nào?</h1>
+
+  <p>Texas được chia thành các khu vực lớn gọi là <strong>quận</strong>. Hãy hình dung quận như văn phòng lo giấy tờ bỏ phiếu của bạn — giống như bưu điện phục vụ con phố của bạn. Bạn không chọn nó. Địa chỉ nhà của bạn quyết định quận của bạn.</p>
+
+  <p>Khu vực Austin <strong>trải rộng trên nhiều quận</strong>. Trung tâm Austin thuộc <strong>Quận Travis (Travis County)</strong>. Một số khu vực phía bắc thuộc <strong>Quận Williamson (Williamson County)</strong>. Một số khu vực phía tây nam thuộc <strong>Quận Hays (Hays County)</strong>. Các khu vực lân cận có thể thuộc <strong>Quận Bastrop</strong> hoặc <strong>Quận Caldwell (Caldwell County)</strong>.</p>
+
+  <figure class="map">
+    <a href="https://en.wikipedia.org/wiki/Greater_Austin#/media/File:Greater_Austin.png" rel="noopener">
+      <img src="../images/greater-austin-counties.png" width="900" height="1054" alt="Bản đồ khu vực Đại Austin cho thấy ranh giới các quận: Travis, Williamson, Hays, Bastrop và Caldwell.">
+    </a>
+    <figcaption>Khu vực Austin và các quận của nó. Chạm vào bản đồ để xem bản lớn hơn.</figcaption>
+  </figure>
+
+  <h2>Tìm quận của bạn</h2>
+  <p>Sống trong khoảng 10 dặm (16 km) tính từ trung tâm Austin? Vậy thì gần như chắc chắn bạn thuộc <strong>Quận Travis</strong>. Xa hơn, hãy dùng ô bên dưới để chắc chắn.</p>
+
+  <form class="lookup" id="county-form" action="https://geocoding.geo.census.gov/geocoder/geographies/address" method="get" target="_blank" rel="noopener">
+    <div class="row">
+      <span class="field">
+        <label for="county-street">Địa chỉ đường phố</label>
+        <input type="text" id="county-street" name="street" placeholder="123 Main St" autocomplete="address-line1">
+      </span>
+      <span class="field">
+        <label for="county-city">Thành phố</label>
+        <input type="text" id="county-city" name="city" value="Austin" autocomplete="address-level2">
+      </span>
+      <span class="field state">
+        <label for="county-state">Tiểu bang</label>
+        <input type="text" id="county-state" name="state" value="TX" size="3" autocomplete="address-level1">
+      </span>
+      <button class="btn" id="county-button" type="submit">Tìm quận của tôi</button>
+    </div>
+    <input type="hidden" name="benchmark" value="Public_AR_Current">
+    <input type="hidden" name="vintage" value="Current_Current">
+    <input type="hidden" name="format" value="html">
+    <p class="privacy-note">Trang web này không thu thập hay lưu địa chỉ của bạn. Khi bạn tra cứu quận, địa chỉ của bạn được gửi đến Cục Điều tra Dân số Hoa Kỳ (U.S. Census Bureau) để tìm quận giúp chúng tôi. Không có gì được lưu tại đây.</p>
+  </form>
+  <div id="county-result" role="status" aria-live="polite"></div>
+
+  <p><strong>Hãy nhớ nó.</strong> Khi đã biết quận của mình, hãy ghi lại hoặc ghi nhớ. Bạn sẽ cần đến nó ở các trang tiếp theo. Trang web này không lưu giúp bạn.</p>
+
+  <p>Vì sao điều này quan trọng: quận của bạn điều hành các cuộc bầu cử của bạn. Đó là nơi bạn đăng ký, và nó quyết định nơi bạn bỏ phiếu. Vì vậy chúng ta cần biết nó trước.</p>
+
+  <div class="watch">
+    <h2>⚠ Cẩn thận — những lỗi thường gặp</h2>
+    <ul>
+      <li><strong>Đừng đoán từ thư từ.</strong> Một địa chỉ ghi “Austin, TX” có thể nằm ngoài thành phố, thậm chí ở một quận khác. Hãy dùng ô bên trên.</li>
+      <li><strong>Dùng địa chỉ nhà của bạn</strong> — nơi bạn thực sự sống — không phải hộp thư bưu điện, cửa hàng nhận thư, hay địa chỉ nơi làm việc.</li>
+      <li><strong>Gần ranh giới, hãy luôn kiểm tra.</strong> Cách trung tâm hơn 10 dặm, đừng cho rằng là Travis — hãy tra cứu.</li>
+      <li><strong>Nhầm quận sẽ hỏng mọi thứ</strong> (đăng ký, lá phiếu và địa điểm bỏ phiếu đều phụ thuộc vào nó). Hãy làm đúng ở đây.</li>
+      <li><strong>Ghi lại hoặc ghi nhớ quận của bạn.</strong> Trang web này sẽ không nhớ giúp bạn, và bạn sẽ cần nó ở các trang tiếp theo.</li>
+    </ul>
+  </div>
+
+  <nav class="stepnav" aria-label="Các bước">
+    <a class="prev" href="can-you-vote.html">Bạn có thể bỏ phiếu không?</a>
+    <a class="next" href="register.html">Tiếp theo: Đăng ký bỏ phiếu</a>
+  </nav>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <p>Đây không phải là trang web của chính phủ. Để biết thông tin chính thức, hãy luôn hỏi văn phòng bầu cử quận của bạn hoặc <a href="https://www.votetexas.gov/" rel="noopener">Tổng Thư ký Tiểu bang Texas (Texas Secretary of State)</a>.</p>
+    <nav aria-label="Trang khác">
+      <a href="questions.html">Hỏi &amp; Đáp</a>
+      <a href="word-list.html">Danh sách từ</a>
+      <a href="get-help.html">Nhận thêm trợ giúp</a>
+      <a href="about.html">Giới thiệu về trang này</a>
+    </nav>
+    <p class="legal">Chiến dịch này chưa đồng ý tuân theo các giới hạn đóng góp và chi tiêu của Austin Fair Campaign Chapter.</p>
+    <p class="legal">Do Chiến dịch Michael Nahas chi trả. Tìm hiểu về Michael Nahas tại <a href="https://mike4austin.org/" rel="noopener">mike4austin.org</a>.</p>
+    <p class="legal">&copy; 2026 Chiến dịch Michael Nahas. Cập nhật lần cuối tháng 7 năm 2026. Quy định và ngày tháng có thể thay đổi — vui lòng kiểm tra lại các liên kết chính thức.</p>
+  </div>
+</footer>
+<script src="county-lookup.js"></script>
+</body>
+</html>
